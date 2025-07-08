@@ -5,7 +5,7 @@ import { nodeModulesPolyfillPlugin } from "esbuild-plugins-node-modules-polyfill
 import { sassPlugin } from "esbuild-sass-plugin";
 import postcss from "postcss";
 import { mergeDeepLeft } from "ramda";
-import sass from "sass";
+import * as sass from "sass";
 
 const require = createRequire(import.meta.url);
 const svgPlugin = require("esbuild-plugin-svgr");
@@ -41,13 +41,13 @@ const defaultConfigurations = {
   plugins: [
     svgPlugin(),
     sassPlugin({
-      transform: async source => {
+      transform: async (source) => {
         const { css } = await postcss(postCssConfig.plugins).process(source, {
           from: undefined,
         });
         return css;
       },
-      importMapper: filePath =>
+      importMapper: (filePath) =>
         filePath.replace("@bigbinary/neetoui", "@bigbinary/neetoui/dist"),
       logger: sass.Logger.silent,
     }),
