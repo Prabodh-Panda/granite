@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.1].define(version: 2025_07_11_133008) do
+ActiveRecord::Schema[7.1].define(version: 2025_07_15_052609) do
   create_table "data_migrations", primary_key: "version", id: :string, force: :cascade do |t|
   end
 
@@ -29,4 +29,5 @@ ActiveRecord::Schema[7.1].define(version: 2025_07_11_133008) do
     t.datetime "updated_at", null: false
   end
 
+  add_foreign_key "tasks", "users", column: "assigned_user_id"
 end
