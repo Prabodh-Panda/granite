@@ -103,3 +103,6 @@ dump.rdb
 # Ignore build files
 /app/assets/builds
 coverage
+
+#Ignore credentials
+credentials.yml.enc
