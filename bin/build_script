@@ -15,7 +15,7 @@ FileUtils.chdir APP_ROOT do
   system("bundle check") || system!("bundle install")
 
   puts "\n== Executing yarn =="
-  system!("yarn")
+  system!("bin/yarn")
 
   puts "\n== Precompiling assets =="
   system!("bin/rails assets:precompile")
