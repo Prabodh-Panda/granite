@@ -17,6 +17,9 @@ FileUtils.chdir APP_ROOT do
   puts "\n== Executing yarn =="
   system!("yarn")
 
+  puts "\n== Executing yarn build =="
+  system!("yarn build")
+
   puts "\n== Precompiling assets =="
   system!("bin/rails assets:precompile")
 
