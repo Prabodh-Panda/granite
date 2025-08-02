@@ -95,3 +95,6 @@ gem "letter_opener", group: :development
 gem "wicked_pdf"
 # wicked_pdf uses the following binary
 gem "wkhtmltopdf-binary"
+
+# To load the environment variables
+gem "dotenv-rails"
