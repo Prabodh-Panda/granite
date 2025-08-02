@@ -98,3 +98,8 @@ gem "wkhtmltopdf-binary"
 
 # To load the environment variables
 gem "dotenv-rails"
+
+# Required by Active Storage to use the GCS
+gem "google-cloud-storage"
+
+gem "redis"
