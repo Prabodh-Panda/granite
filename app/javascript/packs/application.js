@@ -1,5 +1,5 @@
 // Entry point for the build script in your package.json
-import "../stylesheets/application.scss";
+import "../stylesheets/application.css.scss";
 import ReactRailsUJS from "react_ujs";
 import App from "../src/App";
 
