@@ -95,5 +95,10 @@
     "app/views/**/*.html.erb": [
       "bundle exec erblint --lint-all --format compact -a"
     ]
+  },
+  "engines": {
+    "node": "22.13",
+    "npm": "9.x",
+    "yarn": "1.22.x"
   }
 }
